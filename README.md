@@ -46,7 +46,7 @@ There was also a second CloudFormation stack for my node group, which is a group
 
 I had to create an IAM access entry in order to communicate with services like EKS to create a cluster. An access entry is a rule for permissions. I set it up by defining users, roles, and access levels in the system.
 
-It took 10 minutes to create my cluster. Since I'll create this cluster again in the next project of this series, maybe this process could be sped up if I use a automation script.
+It took 10 minutes to create my cluster. Maybe this process could be sped up if I use a automation script.
 
 ![Image](https://i.imgur.com/KtPaM7O.png)
 
@@ -58,7 +58,7 @@ Did you know you can find your EKS cluster's nodes in Amazon EC2? This is becaus
 
 Desired size is the target number of nodes in your node group. Minimum and maximum sizes are helpful for maintaining availability during low demand and scaling up during high demand.
 
-When I deleted my EC2 instances, my EKS cluster replaced them with new ones. This is because the node group ensures the desired number of nodes is maintained.
+When I deleted my EC2 instances, my EKS cluster replaced them with new ones. This is because the node group ensures the desired number of nodes is maintained, unless I delete in cloudformation.
 
 ![Image](https://i.imgur.com/tXZlNUe.png)
 
